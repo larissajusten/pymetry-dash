@@ -1,4 +1,4 @@
-from versao_final.controle_jogo import *
+from controle_jogo import *
 
 controle_jogo = ControleJogo()
 

@@ -1,6 +1,6 @@
 from fase import Fase
 from filePaths import file_paths
-from versao_final.Loaded_images import loaded_images
+from loaded_images import loaded_images
 
 
 class ContainerFases():

@@ -1,8 +1,8 @@
 import pygame
 from pygame.locals import *
 from botao_menu import Botao
-from versao_final.Loaded_images import loaded_images
-from versao_final.abstract_view import AbstractView
+from loaded_images import loaded_images
+from abstract_view import AbstractView
 
 
 class MenuSkin(AbstractView):

@@ -1,7 +1,7 @@
 import pygame
 from pygame.locals import *
 from botao_menu import Botao
-from versao_final.abstract_view import AbstractView
+from abstract_view import AbstractView
 
 
 class EscolhaFasesView(AbstractView):

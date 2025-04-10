@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from versao_final.Loaded_images import loaded_images
+from loaded_images import loaded_images
 import pygame
 
 
