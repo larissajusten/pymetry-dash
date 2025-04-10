@@ -1,7 +1,7 @@
 import pygame
 from pygame.locals import *
-from botao_menu import Botao
-from abstract_view import AbstractView
+from src.objects.botao_menu import Botao
+from src.views.abstract_view import AbstractView
 
 
 class FimDeFaseView(AbstractView):

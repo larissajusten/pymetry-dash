@@ -1,4 +1,4 @@
-from obstaculos import *
+from src.objects.obstaculos import *
 from pygame import mixer
 
 

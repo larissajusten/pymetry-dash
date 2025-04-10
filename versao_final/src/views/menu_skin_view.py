@@ -1,11 +1,11 @@
 import pygame
 from pygame.locals import *
-from botao_menu import Botao
-from loaded_images import loaded_images
-from abstract_view import AbstractView
+from src.objects.botao_menu import Botao
+from src.loaded_images import loaded_images
+from src.views.abstract_view import AbstractView
 
 
-class MenuSkin(AbstractView):
+class MenuSkinView(AbstractView):
 
     def __init__(self, tela, lista_skins):
         super().__init__(tela, 'Menu_skin')

@@ -1,19 +1,19 @@
 import pygame
 from pygame.locals import *
-from fim_de_fase_view import FimDeFaseView
-from jogador import Jogador
-from partida import Partida
-from menu_view import menuView
-from updater import Updater
-from escolha_fases_view import EscolhaFasesView
-from pause_view import PauseView
-from menu_skin import MenuSkin
-from loaded_images import loaded_images
-from container_skins import ContainerSkins
-from instrucoes_view import InstrucoesView
-from container_fases import ContainerFases
-from proxima_fase_view import ProximaFaseView
-from fim_de_jogo_view import FimDeJogoView
+from src.views.fim_de_fase_view import FimDeFaseView
+from src.objects.jogador import Jogador
+from src.objects.partida import Partida
+from src.views.menu_view import menuView
+from src.updater import Updater
+from src.views.escolha_fases_view import EscolhaFasesView
+from src.views.pause_view import PauseView
+from src.views.menu_skin_view import MenuSkinView
+from src.loaded_images import loaded_images
+from src.containers.container_skins import ContainerSkins
+from src.views.instrucoes_view import InstrucoesView
+from src.containers.container_fases import ContainerFases
+from src.views.proxima_fase_view import ProximaFaseView
+from src.views.fim_de_jogo_view import FimDeJogoView
 
 
 class ControleJogo():
@@ -31,7 +31,7 @@ class ControleJogo():
         self.__partida = Partida(self.__jogador, self.tela)
         self.__updater = Updater(self.__jogador, self.__partida)
         self.__intrucoes_view = InstrucoesView(self.tela)
-        self.__menu_skin = MenuSkin(
+        self.__menu_skin = MenuSkinView(
             self.tela, self.__container_skin.skins_quadrado)
         self.__fim_de_fase = FimDeFaseView()
         self.__proxima_fase = ProximaFaseView()

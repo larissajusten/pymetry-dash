@@ -1,5 +1,5 @@
 import pygame
-from obstaculos import Block, Spike, Win, Orb, Portal, PortalSaida
+from src.objects.obstaculos import Block, Spike, Win, Orb, Portal, PortalSaida
 
 
 class Colisao():

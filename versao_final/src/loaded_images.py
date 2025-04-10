@@ -1,7 +1,7 @@
-from singleton import Singleton
+from src.singleton import Singleton
 import pygame
 from pygame.locals import *
-from filePaths import file_paths
+from src.file_paths import file_paths
 
 
 class LoadedImages(Singleton):

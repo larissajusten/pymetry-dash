@@ -1,7 +1,7 @@
 from abc import ABC
 import pygame
 from pygame.locals import *
-from loaded_images import loaded_images
+from src.loaded_images import loaded_images
 
 
 class Obstaculo(ABC):

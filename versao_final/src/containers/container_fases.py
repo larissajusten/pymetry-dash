@@ -1,6 +1,6 @@
-from fase import Fase
-from filePaths import file_paths
-from loaded_images import loaded_images
+from src.objects.fase import Fase
+from src.file_paths import file_paths
+from src.loaded_images import loaded_images
 
 
 class ContainerFases():

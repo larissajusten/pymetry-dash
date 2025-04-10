@@ -1,4 +1,4 @@
-from colisao import Colisao
+from src.objects.colisao import Colisao
 
 
 class Updater():

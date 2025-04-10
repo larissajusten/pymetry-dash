@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from loaded_images import loaded_images
+from src.loaded_images import loaded_images
 import pygame
 
 

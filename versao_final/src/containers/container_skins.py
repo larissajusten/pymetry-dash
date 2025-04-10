@@ -1,5 +1,5 @@
-from skin import Skin
-from loaded_images import loaded_images
+from src.objects.skin import Skin
+from src.loaded_images import loaded_images
 
 
 class ContainerSkins():

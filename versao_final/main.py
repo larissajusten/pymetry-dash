@@ -1,4 +1,4 @@
-from controle_jogo import *
+from src.controle_jogo import *
 
 controle_jogo = ControleJogo()
 
