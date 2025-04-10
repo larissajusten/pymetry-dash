@@ -36,8 +36,10 @@ class ControleJogo():
         self.__fim_de_fase = FimDeFaseView()
         self.__proxima_fase = ProximaFaseView()
         self.__fim_de_jogo = FimDeJogoView()
-        self.flag_transparencia = False
 
+        self.flag_transparencia = False
+        self.running = True
+        self.clock = pygame.time.Clock()
         self.FPS = 60
 
     @property
@@ -49,16 +51,13 @@ class ControleJogo():
         return self.__partida
 
     def inicio_jogo(self):
-        clock = pygame.time.Clock()
         pygame.display.set_caption('Pymetry Dash Menu')
 
-        while True:
+        while self.running:
             self.__menu_view.desenha()
             for event in pygame.event.get():
                 if event.type == QUIT:
-                    pygame.display.quit()
-                    pygame.quit()
-                    exit()
+                    self.running = False
                 if event.type == MOUSEBUTTONDOWN:
                     botao_selecionado = next(
                         (botao.mensagem for botao in self.__menu_view.lista_botoes if botao.is_clicked()), False)
@@ -70,14 +69,14 @@ class ControleJogo():
                     elif botao_selecionado == 'Instruções':
                         return self.mostra_intrucoes()
                     elif botao_selecionado == 'Sair':
-                        pygame.display.quit()
-                        pygame.quit()
-                        exit()
+                        self.running = False
 
-            clock.tick(self.FPS)
+            self.clock.tick(self.FPS)
+
+        pygame.display.quit()
+        pygame.quit()
 
     def mostra_intrucoes(self):
-        clock = pygame.time.Clock()
         pygame.display.set_caption('Menu Instruções')
 
         while True:
@@ -90,11 +89,9 @@ class ControleJogo():
                 if event.type == MOUSEBUTTONDOWN:
                     if self.__intrucoes_view.botao_voltar.is_clicked():
                         return self.inicio_jogo()
-
-            clock.tick(self.FPS)
+            self.clock.tick(self.FPS)
 
     def selecao_skin(self):
-        clock = pygame.time.Clock()
         pygame.display.set_caption('Menu Seleção de Skin')
 
         while True:
@@ -114,11 +111,9 @@ class ControleJogo():
                             skin = self.__container_skin.skins_quadrado[botao_tup[1]]
                             self.__jogador.muda_skin(skin)
                             self.__menu_skin.seleciona_skin(skin.arquivo)
-
-            clock.tick(self.FPS)
+            self.clock.tick(self.FPS)
 
     def escolha_fase(self):
-        clock = pygame.time.Clock()
         pygame.display.set_caption('Menu Escolha de Fase')
 
         while True:
@@ -137,11 +132,9 @@ class ControleJogo():
                             # clicou em um botão e não é o de voltar
                             self.__partida.fase = self.__container_fase.fases[botao_tup[1]]
                             return self.iniciar_partida()
-
-            clock.tick(self.FPS)
+            self.clock.tick(self.FPS)
 
     def iniciar_partida(self):
-        clock = pygame.time.Clock()
         pygame.display.set_caption('Pymetry Dash')
 
         self.jogador.muda_skin(self.jogador.skin_atual)
@@ -166,7 +159,6 @@ class ControleJogo():
                                     self.__pause_view.tela, (150, 140))
                                 flag_pausar_jogo = True
                                 jogando = False
-
             keys_pressed = pygame.key.get_pressed()
 
             if flag_pausar_jogo:
@@ -215,7 +207,7 @@ class ControleJogo():
                 jogador_group.draw(self.partida.tela)
                 self.__updater.update_jogador(keys_pressed)
 
-            clock.tick(self.FPS)
+            self.clock.tick(self.FPS)
 
     def perdeu_a_fase(self):
         self.partida.para_musica()

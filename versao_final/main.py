@@ -1,5 +1,6 @@
 from src.controle_jogo import *
 
-controle_jogo = ControleJogo()
+if __name__ == "__main__":
+    controle_jogo = ControleJogo()
 
-controle_jogo.inicio_jogo()
+    controle_jogo.inicio_jogo()
