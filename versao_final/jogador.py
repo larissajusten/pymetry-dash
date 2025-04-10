@@ -2,7 +2,7 @@ import pygame
 from pygame.locals import *
 from pygame.math import Vector2
 from obstaculos import *
-from containerSkins import *
+from versao_final.container_skins import *
 
 
 class Jogador(pygame.sprite.Sprite):

@@ -1,4 +1,4 @@
-class Skin():
+class Skin:
 
     def __init__(self, nome: str, arquivo: str):
         self.__nome = nome

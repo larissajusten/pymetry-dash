@@ -1,7 +1,7 @@
 import pygame
 from pygame.locals import *
 from botao_menu import Botao
-from abstractView import AbstractView
+from versao_final.abstract_view import AbstractView
 
 
 class InstrucoesView(AbstractView):

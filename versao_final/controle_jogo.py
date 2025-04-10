@@ -1,19 +1,19 @@
 import pygame
 from pygame.locals import *
-from fimDeFaseView import FimDeFaseView
+from versao_final.fim_de_fase_view import FimDeFaseView
 from jogador import Jogador
 from partida import Partida
-from menuView import menuView
+from versao_final.menu_view import menuView
 from updater import Updater
-from escolhaFasesView import EscolhaFasesView
-from pauseView import PauseView
-from menuSkin import MenuSkin
-from LoadedImages import loaded_images
-from containerSkins import ContainerSkins
-from instrucoesView import InstrucoesView
-from containerFases import ContainerFases
-from proximaFaseView import ProximaFaseView
-from fimDeJogoView import FimDeJogoView
+from versao_final.escolha_fases_view import EscolhaFasesView
+from versao_final.pause_view import PauseView
+from versao_final.menu_skin import MenuSkin
+from versao_final.Loaded_images import loaded_images
+from versao_final.container_skins import ContainerSkins
+from versao_final.instrucoes_view import InstrucoesView
+from versao_final.container_fases import ContainerFases
+from versao_final.proxima_fase_view import ProximaFaseView
+from versao_final.fim_de_jogo_view import FimDeJogoView
 
 
 class ControleJogo():

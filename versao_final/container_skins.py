@@ -1,5 +1,5 @@
 from skin import Skin
-from LoadedImages import loaded_images
+from versao_final.Loaded_images import loaded_images
 
 
 class ContainerSkins():
