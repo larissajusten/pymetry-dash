@@ -21,7 +21,7 @@ class ContainerFases():
                  loaded_images.miniatura_fases['Purple'],
                  volume=0.3),
             Fase('Green',
-                 f'{file_paths.musicas}/DigEx - Fall In Love [NCS Release].mp3',
+                 f'{file_paths.musicas}/DigEx-Fall-In-Love-_NCS-Release.mp3',
                  f'{file_paths.mapas}/mapa_green.json',
                  loaded_images.bg_fase['Green'],
                  loaded_images.floor_fase['Green'],
