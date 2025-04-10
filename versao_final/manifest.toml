@@ -1,0 +1,7 @@
+[project]
+name = "pymetry_dash_template"
+version = "0.1.0"
+entrypoint = "main.py"
+
+[[files]]
+include = ["sfx", "img"]

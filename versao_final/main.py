@@ -1,5 +1,9 @@
-from versao_final.controle_jogo import *
+from src.controle_jogo import ControleJogo
 
-controle_jogo = ControleJogo()
+def main():
+    controle_jogo = ControleJogo()
+    controle_jogo.inicio_jogo()
 
-controle_jogo.inicio_jogo()
+
+if __name__ == "__main__":
+    main()
