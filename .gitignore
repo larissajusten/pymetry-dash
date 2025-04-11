@@ -128,8 +128,6 @@ dmypy.json
 .pyre/
 
 # Pygbag 
-*.wav
-*.mp3
 *.pyc
 *.egg-info
 *-pygbag.???
