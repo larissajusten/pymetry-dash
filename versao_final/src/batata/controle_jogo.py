@@ -1,4 +1,5 @@
 import pygame
+import asyncio
 from pygame.locals import *
 from batata.views.fim_de_fase_view import FimDeFaseView
 from batata.objects.jogador import Jogador
@@ -49,6 +50,7 @@ async def inicio_jogo():
     controle_jogo = ControleJogo()
 
     while controle_jogo.running:
+        await asyncio.sleep(0)
         controle_jogo.menu_view.desenha()
         for event in pygame.event.get():
             if event.type == QUIT:
@@ -75,6 +77,7 @@ async def mostra_intrucoes(controle_jogo):
     pygame.display.set_caption('Menu Instruções')
 
     while True:
+        await asyncio.sleep(0)
         controle_jogo.intrucoes_view.desenha()
         for event in pygame.event.get():
             if event.type == QUIT:
@@ -90,6 +93,7 @@ async def selecao_skin(controle_jogo):
     pygame.display.set_caption('Menu Seleção de Skin')
 
     while True:
+        await asyncio.sleep(0)
         controle_jogo.menu_skin.desenha()
         for event in pygame.event.get():
             if event.type == QUIT:
@@ -112,6 +116,7 @@ async def escolha_fase(controle_jogo):
     pygame.display.set_caption('Menu Escolha de Fase')
 
     while True:
+        await asyncio.sleep(0)
         controle_jogo.escolha_fase_view.desenha()
         for event in pygame.event.get():
             if event.type == QUIT:
@@ -140,6 +145,7 @@ async def iniciar_partida(controle_jogo):
     jogando = True
 
     while True:
+        await asyncio.sleep(0)
         pygame.display.update()
         if not flag_pausar_jogo and not controle_jogo.jogador.morte and not controle_jogo.jogador.vitoria:
             for event in pygame.event.get():
