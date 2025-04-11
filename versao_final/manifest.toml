@@ -1,8 +1,0 @@
-[project]
-name = "my-game"
-version = "0.1.0"
-entrypoint = "main.py"
-
-[[files]]
-source = "assets"
-target = "assets"

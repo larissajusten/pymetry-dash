@@ -133,5 +133,5 @@ dmypy.json
 *.pyc
 *.egg-info
 *-pygbag.???
-versao_final/build/
-versao_final/__pycache__/
+versao_final/src/build/**
+**/__pycache__/
