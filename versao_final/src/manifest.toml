@@ -1,0 +1,12 @@
+[project]
+name = "versao_final"
+version = "0.1.0"
+entrypoint = "main.py"
+
+[[files]]
+source = "assets"
+target = "assets"
+
+[[files]]
+source = "batata"
+target = "batata"

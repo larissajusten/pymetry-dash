@@ -8,7 +8,6 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
 develop-eggs/
 dist/
 downloads/
@@ -127,3 +126,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Pygbag 
+*.pyc
+*.egg-info
+*-pygbag.???
+versao_final/src/build/web-cache/
+**/__pycache__/
